@@ -1,0 +1,45 @@
+
+
+
+
+
+
+CREATE TABLE virtual_domains (
+	id SERIAL PRIMARY KEY,
+	name varchar(50) NOT NULL
+);
+
+CREATE TABLE virtual_users ( 
+	id SERIAL PRIMARY KEY,
+	domain_id int NOT NULL REFERENCES virtual_domains(id) ON DELETE CASCADE,
+	password varchar(106) NOT NULL,
+	email varchar(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE virtual_aliases (
+	id SERIAL PRIMARY KEY,
+	domain_id int NOT NULL REFERENCES virtual_domains(id) ON DELETE CASCADE,
+	source varchar(100) NOT NULL,
+	destination varchar(100) NOT NULL
+); 
+
+
+
+
+INSERT INTO `mailserver`.`virtual_domains`
+  (`id` ,`name`)
+VALUES
+  ('', '');
+
+
+
+INSERT INTO `mailserver`.`virtual_users`
+  (`id`, `domain_id`, `password` , `email`)
+VALUES
+  ('', '', '', '');
+
+
+INSERT INTO `mailserver`.`virtual_aliases`
+  (`id`, `domain_id`, `source`, `destination`)
+VALUES
+  ('', '', '', '');
