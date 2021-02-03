@@ -2,11 +2,11 @@ version: '3.6'
 
 services:
   dbmail:
-    image: castermanerobin/reseau_entreprise_groupe_b:dbmail
+    image: mysql
     restart: always
 
     environment:
-      MYSQL_DATABASE: 'db'
+      MYSQL_DATABASE: 'maildb'
       MYSQL_ROOT_PASSWORD: 'password'
 
     ports:
