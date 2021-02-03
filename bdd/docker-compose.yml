@@ -1,24 +1,16 @@
-version: '3.6'
+version : '3.6'
 
-services:
-  dbmail:
-    image: castermanerobin/reseau_entreprise_groupe_b:dbmail
-    restart: always
-
-    environment:
-      MYSQL_DATABASE: 'maildb'
-      MYSQL_ROOT_PASSWORD: 'password'
-
-    ports:
-      - '3306:3306'
-
-    expose:
-      - '3306'
-
-    volumes:
-    - mysql-data:/var/lib/mysql
-    - ./sql-scripts/:/docker-entrypoint-initdb.d
-
-volumes:
-  mysql-data:
-    name: mysql-data
+services :
+    maildb:
+        image : mysql
+        container_name: db
+        tty : true
+	restart: always
+	
+        volumes:
+         - ./sql-scripts:/home
+        ports :
+         - "3306:3306"
+        environment :
+         MYSQL_ROOT_PASSWORD: password
+         MYSQL_DATABASE: mailserver
