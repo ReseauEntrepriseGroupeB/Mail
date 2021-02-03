@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   dbmail:
-    image: mysql
+    image: castermanerobin/reseau_entreprise_groupe_b:dbmail
     restart: always
 
     environment:
