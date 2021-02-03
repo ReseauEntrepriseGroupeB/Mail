@@ -43,3 +43,44 @@ INSERT INTO `mailserver`.`virtual_aliases`
   (`id`, `domain_id`, `source`, `destination`)
 VALUES
   ('', '', '', '');
+
+
+
+
+INSERT INTO virtual_domains(id, name)
+VALUES (1, 'Igor');
+
+INSERT INTO virtual_users(id, domain_id, password, email)
+VALUES (1, 1, );
+
+
+
+INSERT INTO virtual_domains
+  (id ,name)
+VALUES
+  (1, 'wt2-9.ephec-ti.be'),
+  (2, 'mail.wt2-9.ephec-ti.be'),
+  (3, 'mail'),
+  (4, 'localhost.wt2-9.ephec-ti.be');
+
+
+
+INSERT INTO virtual_users
+  (id, domain_id, password, email)
+VALUES
+  (3, 1, 'user1234', 'root@wt2-9.ephec-ti.be'),
+  (1, 1, 'user1234', 'contact@wt2-9.ephec-ti.be'),
+  (4, 1, 'user1234', 'directeur@wt2-9.ephec-ti.be'),
+  (5, 1, 'user1234', 'b2b@wt2-9.ephec-ti.be'),
+  (2, 1, 'user1234', 'florent@wt2-9.ephec-ti.be');
+
+
+INSERT INTO `mailserver`.`virtual_aliases`
+  (id, domain_id, source, destination)
+VALUES
+  (1, 1, 'florent@wt2-9.ephec-ti.be', 'florent@wt2-9.ephec-ti.be');
+
+
+
+
+
