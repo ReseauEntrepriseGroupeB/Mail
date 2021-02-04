@@ -25,7 +25,7 @@ CREATE TABLE `virtual_aliases` (
 
 
 
-INSERT INTO `mailserver`mailserver.`virtual_domains` (`name`) VALUES ('ephec-ti.eu'),('mail.ephec-ti.eu'),('mail'),('test.ephec-ti.eu');
+INSERT INTO `mailserver`.`virtual_domains` (`name`) VALUES ('ephec-ti.eu'),('mail.ephec-ti.eu'),('mail'),('test.ephec-ti.eu');
 
 INSERT INTO `mailserver`.`virtual_users` (`domain_id`, `password` , `email`) VALUES ('1', 'user1234', 'root@ephec-ti.eu'), ('1', 'user1234', 'contact@ephec-ti.eu'), ('1', 'user1234', 'directeur@ephec-ti.eu'), ('1', 'user1234', 'b2b@ephec-ti.eu'), ('1', 'user1234', 'florent@ephec-ti.eu');
 
