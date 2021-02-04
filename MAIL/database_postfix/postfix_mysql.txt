@@ -2,7 +2,8 @@
 ##########################################################################
 Créer une base de donnée => mailserver
 Créer un utilisateur => mailuser
-GRANT SELECT ON mailserver.* TO 'mailuser'@'172.17.10.14' IDENTIFIED BY 'mailuserpass'; 
+GRANT SELECT ON mailserver.* TO 'mailuser'@'172.17.10.14' IDENTIFIED BY 'user1234'; 
+FLUSH PRIVILEGES;
 
 
 
