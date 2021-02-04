@@ -60,14 +60,14 @@ smtpd_relay_restrictions =
 # See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
 # information on enabling SSL in the smtp client.
 
-myhostname = mail.wt2-9.ephec-ti.be
+myhostname = mail.bedroom.ephec-ti.eu
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
-mydomain = wt2-9.ephec-ti.be
+mydomain = bedroom.ephec-ti.eu
 myorigin = $mydomain
 #mydestination = localhost
 relayhost =
-mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 51.178.41.95
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 172.17.11.4
 mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
