@@ -25,12 +25,9 @@ CREATE TABLE `virtual_aliases` (
 
 
 
-INSERT INTO `mailserver`.`virtual_domains` (`name`) VALUES ('ephec-ti.eu'),('intra.ephec-ti.eu'),('mail.ephec-ti.eu'),('mail'),('test.ephec-ti.eu');
+INSERT INTO `mailserver`.`virtual_domains` (`name`) VALUES ('bedroom.ephec-ti.eu'),('ephec-ti.eu'),('mail.bedroom.ephec-ti.eu'),('mail');
 
-INSERT INTO `mailserver`.`virtual_users` (`domain_id`, `password` , `email`) VALUES ('1', 'user1234', 'root@ephec-ti.eu'), ('1', 'user1234', 'contact@ephec-ti.eu'), ('1', 'user1234', 'directeur@ephec-ti.eu'), ('1', 'user1234', 'b2b@ephec-ti.eu'), ('1', 'user1234', 'florent@ephec-ti.eu');
-
-
-INSERT INTO `mailserver`.`virtual_aliases` (`domain_id`, `source`, `destination`) VALUES ('1', 'florent@ephec-ti.eu', 'florent@ephec-ti.eu'),('1', 'Igor@ephec-ti.eu', 'Igor@ephec-ti.eu'),('1', 'robin@ephec-ti.eu', 'robin@ephec-ti.eu');
+INSERT INTO `mailserver`.`virtual_users` (`domain_id`, `password` , `email`) VALUES ('1', 'user1234', 'root@bedroom.ephec-ti.eu'), ('1', 'user1234', 'contact@bedroom.ephec-ti.eu'), ('1', 'user1234', 'directeur@bedroom.ephec-ti.eu'), ('1', 'user1234', 'b2b@bedroom.ephec-ti.eu'), ('1', 'user1234', 'florent@bedroom.ephec-ti.eu');
 
 
-
+INSERT INTO `mailserver`.`virtual_aliases` (`domain_id`, `source`, `destination`) VALUES ('1', 'florent@bedroom.ephec-ti.eu', 'florent@bedroom.ephec-ti.eu'),('1', 'igor@bedroom.ephec-ti.eu', 'igor@bedroom.ephec-ti.eu');
